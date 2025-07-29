@@ -1,0 +1,86 @@
+🦀 RUST + CARGO + RUSTLINGS CHEAT SHEET
+=======================================
+
+🧭 RUST TOOLCHAIN BASICS
+
+  rustup update
+    ▸ Updates Rust toolchain (Rust + Cargo)
+
+  cargo new <name>
+    ▸ Creates a new Rust project with src/main.rs
+
+  cargo build
+    ▸ Compiles project in debug mode
+
+  cargo run
+    ▸ Builds and runs main.rs
+
+  cargo check
+    ▸ Checks for compilation errors quickly (no binary)
+
+  cargo test
+    ▸ Runs #[test] unit tests
+
+  cargo install <crate>
+    ▸ Installs CLI tool globally from crates.io
+
+
+🛠 RUSTLINGS WORKFLOW
+
+  First-Time Setup (Preferred Method):
+
+    cargo install rustlings
+    rustlings init
+    cd rustlings
+    rustlings
+
+    ➤ This sets up all exercises in ~/rustlings
+
+
+🐚 RUSTLINGS SHORTCUTS (During Exercises)
+
+  rustlings     ▸ Starts interactive mode
+
+  n             ▸ Next exercise
+  h             ▸ Show hint
+  c             ▸ Check all
+  x             ▸ Reset current exercise
+  q             ▸ Quit
+
+
+💾 WHERE IS PROGRESS STORED?
+
+  ▸ Rustlings progress is tracked via:
+      - Modifications in exercises/
+      - Internal checksums (not visible to user)
+
+  ✅ To back up progress:
+      ➤ Save a copy of exercises/ and solutions/
+
+
+🔗 SYMLINKS & FOLDER SETUP
+
+  To avoid long paths like /run/media/andarii/data/...
+
+  ln -sf /run/media/andarii/data/Programming/Rust/rustlings ~/rustlings
+
+  Then just use: cd ~/rustlings
+
+
+⚠ COMMON CARGO ERRORS (TRANSLATED)
+
+  ❌ could not find Cargo.toml
+     → You’re not in a Rust project directory.
+
+  ❌ unrecognized subcommand 'watch'
+     → You’re using a version that doesn’t support this command.
+
+  ❌ cargo metadata … failed
+     → Cargo expected a proper project (with Cargo.toml) but didn’t find one.
+
+
+💡 PRO TIPS
+
+  ▸ Use 'cargo install-update -a' to keep installed CLI tools fresh.
+  ▸ Want to test something quickly? Run 'cargo new test_project'.
+  ▸ Use the restore script to preserve progress across installs.
