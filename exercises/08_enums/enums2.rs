@@ -7,6 +7,15 @@ struct Point {
 #[derive(Debug)]
 enum Message {
     // TODO: Define the different variants used below.
+    Resize {
+        width: i32, 
+        height: i32,
+    },
+    Message(Point { x: i32, y: i32 }),
+    Move,
+    Echo,
+    ChangeColor,
+    Quit,
 }
 
 impl Message {
