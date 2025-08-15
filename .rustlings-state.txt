@@ -1,8 +1,15 @@
 DON'T EDIT THIS FILE!
 
-enums3
+strings2
 
 intro1
+intro2
+variables1
+variables2
+variables3
+variables4
+variables5
+variables6
 functions1
 functions2
 functions3
@@ -30,3 +37,5 @@ structs2
 structs3
 enums1
 enums2
+enums3
+strings1
