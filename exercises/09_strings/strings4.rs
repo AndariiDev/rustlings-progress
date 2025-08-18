@@ -1,3 +1,5 @@
+use std::string;
+
 // Calls of this function should be replaced with calls of `string_slice` or `string`.
 fn placeholder() {}
 
@@ -13,25 +15,25 @@ fn string(arg: String) {
 // Your task is to replace `placeholder(…)` with either `string_slice(…)`
 // or `string(…)` depending on what you think each value is.
 fn main() {
-    placeholder("blue");
+    string_slice("blue"); // literal string is a &str
 
-    placeholder("red".to_string());
+    string("red".to_string()); // because .to_string produces a string, transforming slice to string here
 
-    placeholder(String::from("hi"));
+    string(String::from("hi")); // Make String from string slice with String::from
 
-    placeholder("rust is fun!".to_owned());
+    string("rust is fun!".to_owned()); // Only strings can be owned
 
-    placeholder("nice weather".into());
+    string("nice weather".into()); // idk, does .into transform a string into a slice?
 
-    placeholder(format!("Interpolation {}", "Station"));
+    string(format!("Interpolation {}", "Station")); // String formatting, clearly; format! creates a string
 
     // WARNING: This is byte indexing, not character indexing.
     // Character indexing can be done using `s.chars().nth(INDEX)`.
-    placeholder(&String::from("abc")[0..1]);
+    string_slice(&String::from("abc")[0..1]); // borrowed String = string_slice?
 
-    placeholder("  hello there ".trim());
+    string_slice("  hello there ".trim()); // .trim is only for string_slices, taking an &str and returning an &str slice
 
-    placeholder("Happy Monday!".replace("Mon", "Tues"));
+    string("Happy Monday!".replace("Mon", "Tues")); // Clearly a string; .replace returns a string.
 
-    placeholder("mY sHiFt KeY iS sTiCkY".to_lowercase());
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase()); // Again, clearly a string, just reformatted
 }
